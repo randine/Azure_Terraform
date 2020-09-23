@@ -12,13 +12,13 @@ Unfortunely at this stage I can't get Terraform to correctly install the Kong AP
 
 ### Commands:
 ```
-Terraform init
+terraform init
 ```
 ```
-Terraform plan
+terraform plan
 ```
 ```
-Terraform apply - type 'yes' to rollout
+terraform apply - type 'yes' to rollout
 ```
 To add the new cluster to the kube config file:
 ```
