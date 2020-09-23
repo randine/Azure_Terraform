@@ -21,6 +21,11 @@ az aks get-credentials -n Kong-k8s -g Kong-k8s
 To install Kong:
 kubectl apply -f https://bit.ly/kong-ingress-dbless
 
+Get the external Ip address from the kong proxy:
+kubectl -n kong get service kong-proxy -o jsonpath='{.status.*.ingress.*.ip}'
+
+Open the browser and paste the ip.
+
 As the terraform plan already installed an ingress, you can use the external address assigned to the Kong Proxy to access the deployment. 
 
 There are 3 replicas deployed, and if you refresh the browser, you can see it load balancing between the 3. 
